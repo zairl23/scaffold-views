@@ -1,15 +1,13 @@
 <?php
 	Route::group(array('prefix' => 'manage'), function(){
 
-  		Route::get('/', 'Miao\Person\Routing\VideosController@index');
+  		Route::get('/', 'Controller@index');
 
-  		Route::resource('videos', 'Miao\Person\Routing\VideosController');
+  		Route::resource('videos', 'Controller');
 
-  		Route::resource('tags', 'Miao\Person\Routing\TagsController');
+  		Route::resource('tags', 'TagsController');
 
-  		Route::resource('topics', 'Miao\Person\Routing\TopicsController');
-
-  		//Route::resource('videos.comments', 'Miao\Person\Routing\CommentsController');
+  		Route::resource('topics', 'TopicsController');
 
   		Route::get('data/index', array('as' => 'data.index', 'uses' => 'HomeController@data'));
 	});
