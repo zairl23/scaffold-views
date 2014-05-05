@@ -2,9 +2,9 @@
 
 @section('main')
 
-<h1>查看用户</h1>
+<h1>查看</h1>
 
-<p>{{ link_to_route('users.index', '用户列表') }}</p>
+<p>{{ link_to_route('users.index', '列表') }}</p>
 
 <table class="table table-striped table-bordered">
 	<thead>
